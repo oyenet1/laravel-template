@@ -12,6 +12,12 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $roles = ['super-admin', 'admin', 'user'];
+
+        foreach ($roles as $role) {
+            \Spatie\Permission\Models\Role::firstOrCreate([
+                'name' => $role
+            ]);
+        }
     }
 }
