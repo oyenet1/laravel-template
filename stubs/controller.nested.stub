@@ -4,11 +4,13 @@ namespace {{ namespace }};
 
 use {{ namespacedModel }};
 use {{ rootNamespace }}Http\Controllers\Controller;
+use App\Traits\ApiResponse;
 use {{ namespacedParentModel }};
 use Illuminate\Http\Request;
 
 class {{ class }} extends Controller
 {
+    use ApiResponse;
     /**
      * Display a listing of the resource.
      */

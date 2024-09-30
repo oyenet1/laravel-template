@@ -3,9 +3,10 @@
 namespace {{ namespace }};
 
 use {{ rootNamespace }}Http\Controllers\Controller;
+use App\Traits\ApiResponse;
 use Illuminate\Http\Request;
 
 class {{ class }} extends Controller
 {
-    //
+    use ApiResponse;
 }
